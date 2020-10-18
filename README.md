@@ -1,8 +1,8 @@
 # Test project
 
 ####Your goal is to create a Java application which answers the following questions: 
-#####1) Does the route between two points (id-A and id-B) exist?
-#####2) If the answer is yes, then calculate the minimal route length between id-A and id-B.
+1) Does the route between two points (id-A and id-B) exist?
+2) If the answer is yes, then calculate the minimal route length between id-A and id-B.
 
 
 #Solution
