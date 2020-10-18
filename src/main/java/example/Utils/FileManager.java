@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.SplittableRandom;
 
 public class FileManager {
 
@@ -37,9 +38,9 @@ public class FileManager {
         return pipeList;
     }
 
-    public static void writeFile(List<String> result){
+    public static void writeFile(List<String> result, String path){
         try {
-            FileWriter myWriter = new FileWriter("result.csv");
+            FileWriter myWriter = new FileWriter(path);
             for(String str:result)
                 myWriter.write(str);
 

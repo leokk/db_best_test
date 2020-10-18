@@ -17,9 +17,10 @@ public class TaskPerformer {
     private String dbPath;
     private int[][] pipeMatrix;
     private int node;
-
+    private String routePath;
 
     public TaskPerformer(String pipePath, String routePath, String dbPath) {
+        this.routePath = routePath;
         this.pipeList = FileManager.readFile(pipePath);;
         this.routeList = FileManager.readFile(routePath);
         this.dbPath = dbPath;
@@ -58,7 +59,11 @@ public class TaskPerformer {
             else
                 results.add("FALSE;\n");
         }
-        FileManager.writeFile(results);
+
+//        write file in route folder
+        String str=routePath;
+        int index=str.lastIndexOf('\\');
+        FileManager.writeFile(results,str.substring(0,index)+"\\results.csv");
 
         //write sql
         H2DataBase dataBase = new H2DataBase(dbPath);

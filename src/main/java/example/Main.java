@@ -21,13 +21,13 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(url);
         primaryStage.setTitle("db_best_test");
         primaryStage.setScene(new Scene(root));
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 
 
     public static void main(String[] args) throws SQLException {
         launch(args);
-
     }
 
 
